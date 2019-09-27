@@ -2,3 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
+
+
+.list-group-flush {
+
+}
+
+p.round3 {
+  border: 2px solid red;
+  border-radius: 12px;
+}

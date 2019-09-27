@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Quiz1</title>
+    <title>Quiz2</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,7 @@
 <body>
 <a class="navbar-brand" href="#">Hello Quiz Gods!</a>
   <nav class="navbar navbar-inverse bg-inverse">
+  </nav>
   <!-- Navbar content -->
 </nav>
 
@@ -19,7 +20,29 @@
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
   <!-- Navbar content -->
 </nav>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <h2>Do you have a favorite type of vehicle?  Tell me about it!</h2>
+      <p>It may not be for looks or for style; whatever the reason....let me know!</p>
+      <br />
+    <nav class="btn btn-outline-info">
+      <%= link_to 'Your favorite vehicle!', new_vehicle_path %>
+    </nav>
+</nav>
+
+
 
 <%= yield %>
+
+<% @vehicles.each do |vehicle| %>
+<p class="round3">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h2><%= vehicle.make %></h2></li>
+    <li class="list-group-item"><%= vehicle.model %></li>
+    <li class="list-group-item"><%= vehicle.year %></li>
+  </ul>
+<% end %>
+</p>
+
+
 </body>
 </html>

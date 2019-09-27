@@ -1,4 +1,4 @@
-class MainpageController < ApplicationController
+class VehiclesController < ApplicationController
   def index
     @vehicles = Vehicle.all
   end
