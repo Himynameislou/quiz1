@@ -69,5 +69,6 @@ source 'https://rails-assets.org' do
 
 gem 'simple_form'
 
+gem 'bundler', '>= 1.8.4'
 
 end
